@@ -36,12 +36,12 @@
                 </div>
             </div>
         </div>
-        @if (isset($rooms) && count($rooms) == 0)
+        @if (isset($rooms) && is_null($rooms))
             <div class="form-group" style="text-align: center">
                 <label>@lang('quickadmin.find-room.no_rooms_found')</label>
             </div>
         @endif
-        @if (count($rooms) > 0)
+        @if (!is_null($rooms))
         <div class="panel-body table-responsive">
             <table class="table table-bordered table-striped">
                 <thead>
