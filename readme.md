@@ -3,7 +3,7 @@
 It is a demo project for demonstrating what can be generated with [QuickAdminPanel](https://quickadminpanel.com) tool.
 Hotel Booking is all generated with __QuickAdmin__ except for some custom code for Room Search.
 
-![Hotel_Booking screenshot](http://webcoderpro.com/hotel-booking-demo.png)
+![Hotel_Booking screenshot](https://laraveldaily.com/wp-content/uploads/2018/11/hotel-booking-demo.png)
 
 ## How to use
 
