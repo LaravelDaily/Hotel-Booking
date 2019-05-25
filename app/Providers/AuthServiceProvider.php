@@ -141,6 +141,17 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('find_room_access', function ($user) {
             return in_array($user->role_id, [1, 2]);
         });
+        // Auth gates for: add category
+        Gate::define('category_create', function ($user) {
+            return in_array($user->role_id, [1]);
+        });
+        // Auth gates for: add category
+        Gate::define('category_edit', function ($user) {
+            return in_array($user->role_id, [1]);
+        });
+        Gate::define('category_delete', function ($user) {
+            return in_array($user->role_id, [1]);
+        });
 
     }
 }

@@ -34,6 +34,13 @@ return [
 			'name' => 'Name',
 		],
 	],
+	'categories' => [
+		'title' => 'Categories',
+		'fields' => [
+			'title' => 'Title',
+			'name' => 'Name',
+		],
+	],
 	
 	'customers' => [
 		'title' => 'Customers',
@@ -52,6 +59,7 @@ return [
 		'fields' => [
 			'room-number' => 'Room number',
 			'floor' => 'Floor',
+			'category' => 'Category',
 			'description' => 'Description',
             'actions' => 'Actions',
 		],
