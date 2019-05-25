@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreRoomsRequest;
 use App\Http\Requests\Admin\UpdateRoomsRequest;
+use App\Category;
 
 class RoomsController extends Controller
 {
@@ -45,7 +46,9 @@ class RoomsController extends Controller
         if (! Gate::allows('room_create')) {
             return abort(401);
         }
-        return view('admin.rooms.create');
+        
+        $categories = Category::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
+        return view('admin.rooms.create',compact('categories'));
     }
 
     /**
@@ -79,8 +82,9 @@ class RoomsController extends Controller
             return abort(401);
         }
         $room = Room::findOrFail($id);
+        $categories = Category::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
 
-        return view('admin.rooms.edit', compact('room'));
+        return view('admin.rooms.edit', compact('room','categories'));
     }
 
     /**
