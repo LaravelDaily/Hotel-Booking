@@ -12,7 +12,7 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('customer_id', trans('quickadmin.bookings.fields.customer').'', ['class' => 'control-label']) !!}
+                    {!! Form::label('customer_id', trans('quickadmin.bookings.fields.customer').' *', ['class' => 'control-label']) !!}
                     {!! Form::select('customer_id', $customers, old('customer_id'), ['class' => 'form-control select2']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('customer_id'))
@@ -62,6 +62,20 @@
                 <div class="col-xs-12 form-group">
                     {!! Form::label('additional_information', trans('quickadmin.bookings.fields.additional-information').'*', ['class' => 'control-label']) !!}
                     {!! Form::textarea('additional_information', old('additional_information'), ['class' => 'form-control ', 'placeholder' => '', 'required' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('additional_information'))
+                        <p class="help-block">
+                            {{ $errors->first('additional_information') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('Precio',trans('quickadmin.bookings.fields.amount').'*') !!}
+                    {!! Form::text('amount', old('amount'), ['class' => 'form-control ', 'placeholder' => '', 'required' => '']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('additional_information'))
                         <p class="help-block">

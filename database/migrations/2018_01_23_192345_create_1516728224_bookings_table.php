@@ -23,6 +23,8 @@ class Create1516728224BookingsTable extends Migration
                 $table->softDeletes();
 
                 $table->index(['deleted_at']);
+
+
             });
         }
     }
