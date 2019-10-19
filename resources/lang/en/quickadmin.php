@@ -73,6 +73,7 @@ return [
 			'time-from' => 'Time from',
 			'time-to' => 'Time to',
 			'additional-information' => 'Additional information',
+            'amount' => 'Amount'
 		],
 	],
 	
