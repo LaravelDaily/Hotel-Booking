@@ -25,6 +25,8 @@ class Create1516728020CustomersTable extends Migration
                 $table->softDeletes();
 
                 $table->index(['deleted_at']);
+
+                $table->string('dni');
             });
         }
     }
