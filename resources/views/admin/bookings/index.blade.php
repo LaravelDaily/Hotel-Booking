@@ -37,6 +37,7 @@
                         <th>@lang('quickadmin.bookings.fields.room')</th>
                         <th>@lang('quickadmin.bookings.fields.time-from')</th>
                         <th>@lang('quickadmin.bookings.fields.time-to')</th>
+                        <th>@lang('quickadmin.bookings.fields.amount')</th>
                         <th>@lang('quickadmin.bookings.fields.additional-information')</th>
                         @if( request('show_deleted') == 1 )
                         <th>&nbsp;</th>
@@ -58,6 +59,7 @@
                                 <td field-key='room'>{{ $booking->room->room_number or '' }}</td>
                                 <td field-key='time_from'>{{ $booking->time_from }}</td>
                                 <td field-key='time_to'>{{ $booking->time_to }}</td>
+                                <td field-key='amount'>{{ $booking->amount }}</td>
                                 <td field-key='additional_information'>{!! $booking->additional_information !!}</td>
                                 @if( request('show_deleted') == 1 )
                                 <td>
